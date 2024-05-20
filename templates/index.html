@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patent Search</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Patent Search</h1>
+        <form action="{{ url_for('search') }}" method="post">
+            <label for="patent_id">Enter Patent Number:</label>
+            <input type="text" id="patent_id" name="patent_id" required>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+</body>
+</html>

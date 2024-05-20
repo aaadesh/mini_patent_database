@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patent {{ patent['Patent'] }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Patent Details</h1>
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>Patent</th>
+                    <td>{{ patent['Patent'] }}</td>
+                </tr>
+                <tr>
+                    <th>Publication Number</th>
+                    <td>{{ patent['Publication Number'] }}</td>
+                </tr>
+                <tr>
+                    <th>Country Code</th>
+                    <td>{{ patent['Country Code'] }}</td>
+                </tr>
+                <tr>
+                    <th>Patent Number</th>
+                    <td>{{ patent['Patent Number'] }}</td>
+                </tr>
+                <tr>
+                    <th>Kind Code</th>
+                    <td>{{ patent['Kind Code'] }}</td>
+                </tr>
+                <tr>
+                    <th>Application</th>
+                    <td>{{ patent['Application'] }}</td>
+                </tr>
+                <tr>
+                    <th>Application Country Code</th>
+                    <td>{{ patent['Application Country Code'] }}</td>
+                </tr>
+                <tr>
+                    <th>Application Number</th>
+                    <td>{{ patent['Application Number'] }}</td>
+                </tr>
+                <tr>
+                    <th>Publication Date</th>
+                    <td>{{ patent['Publication Date'] }}</td>
+                </tr>
+                <tr>
+                    <th>Application Date</th>
+                    <td>{{ patent['Application Date'] }}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="description-claims">
+            <div class="description">
+                <h2>Description</h2>
+                <table>
+                    <tr>
+                        <td>{{ patent['Description'] }}</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="claims">
+                <h2>Claims</h2>
+                <table>
+                    <tr>
+                        <td>{{ patent['Claims'] }}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Return to <a href="/">Home</a></p>
+    </div>
+</body>
+</html>
